@@ -19,9 +19,6 @@ class Main extends Component {
     }
 
     render() {
-
-        console.log("selectedDish", this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0]);
-
         return (
             <div>
                 <Navbar dark color="primary">
