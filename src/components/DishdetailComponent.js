@@ -26,7 +26,11 @@ class DishdetailComponent extends Component {
                                 <li>{item.comment}</li>
                             </ul>
                             <ul className="list-unstyled">
-                                <li>-- {item.author}, {item.date}</li>
+                                <li>-- {item.author}, {new Intl.DateTimeFormat('en-US', {
+                                    year: 'numeric',
+                                    month: 'short',
+                                    day: '2-digit'
+                                }).format(new Date(Date.parse(item.date)))}</li>
                             </ul>
                         </div>
                     )
@@ -37,17 +41,19 @@ class DishdetailComponent extends Component {
 
     render() {
         return (
-            <>
-                <div className="col-12 col-md-5 m-1">
-                    {this.renderDish(this.props.selectedDish)}
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 col-md-5 m-1">
+                        {this.renderDish(this.props.dish)}
+                    </div>
+                    <div className="col-12 col-md-5 m-1">
+                        {this.renderComments(this.props.dish.comments)}
+                    </div>
                 </div>
-                <div className="col-12 col-md-5 m-1">
-                    {this.renderComments(this.props.selectedDish.comments)}
-                </div>
-            </>
+            </div>
         )
     }
 
 }
 
-export default DishdetailComponent;
+export default DishdetailComponent
