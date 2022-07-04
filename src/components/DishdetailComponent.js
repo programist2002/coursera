@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {
     Card, CardImg, CardText, CardBody,
-    CardTitle, Breadcrumb, BreadcrumbItem, Button, ModalHeader, ModalBody, Form, FormGroup, Label, Input, Modal
+    CardTitle, Breadcrumb, BreadcrumbItem, Button, ModalHeader, ModalBody, FormGroup, Label, Modal
 } from 'reactstrap';
 import {Control, LocalForm, Errors} from 'react-redux-form';
 import {Link} from 'react-router-dom';
@@ -65,6 +65,7 @@ class DishDetailСomponent extends Component {
         };
 
         this.toggleModal = this.toggleModal.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     toggleModal() {
