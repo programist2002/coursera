@@ -1,4 +1,5 @@
 import React from 'react';
+import {FadeTransform} from 'react-animation-components';
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle
@@ -15,22 +16,28 @@ function RenderCard({item, isLoading, errMess}) {
         return (
             <h4>{errMess}</h4>
         );
-    }
-    else {
+    } else {
         return (
-            <Card>
-                <CardImg src={baseUrl + item.image} alt={item.name}/>
-                <CardBody>
-                    <CardTitle>{item.name}</CardTitle>
-                    {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null}
-                    <CardText>{item.description}</CardText>
-                </CardBody>
-            </Card>
+            <FadeTransform
+                in
+                transformProps={{
+                    exitTransform: 'scale(0.5) translateY(-50%)'
+                }}>
+                <Card>
+                    <CardImg src={baseUrl + item.image} alt={item.name}/>
+                    <CardBody>
+                        <CardTitle>{item.name}</CardTitle>
+                        {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null}
+                        <CardText>{item.description}</CardText>
+                    </CardBody>
+                </Card>
+            </FadeTransform>
         );
     }
 }
 
 function Home(props) {
+
     return (
         <div className="container">
             <div className="row align-items-start">
