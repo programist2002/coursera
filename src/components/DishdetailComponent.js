@@ -109,7 +109,7 @@ function RenderDish({dish}) {
 
 function RenderComments({comments, postComment, dishId}) {
     return (
-        <div>
+        <div key={dishId}>
             <h4>Comments</h4>
             <Stagger in>
                 {comments.map((item) => {
