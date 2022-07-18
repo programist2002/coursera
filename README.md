@@ -208,14 +208,6 @@
       "date": "2011-12-02T17:57:28.556094Z"
     },
     {
-      "dishId": 0,
-      "rating": "4",
-      "author": "Vladik Talakh",
-      "comment": "Very good",
-      "date": "2022-07-05T14:23:08.989Z",
-      "id": 20
-    },
-    {
       "date": "2022-07-09T20:37:46.767Z",
       "id": 21
     },
@@ -1582,16 +1574,6 @@
       "contactType": "Email",
       "message": "Test feedback",
       "id": 2
-    },
-    {
-      "firstname": "Владислав",
-      "lastname": "Талах",
-      "telnum": "0634079781",
-      "email": "programist2002@gmail.com",
-      "agree": true,
-      "contactType": "Email",
-      "message": "Send feedback",
-      "id": 3
     }
   ]
 }
